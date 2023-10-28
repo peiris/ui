@@ -8,11 +8,11 @@
   "license": "MIT",
   "author": {
     "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "url": "https://twitter.com/khpeiris"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shadcn/ui.git",
+    "url": "https://github.com/peiris/ui.git",
     "directory": "packages/cli"
   },
   "files": [
