@@ -28,11 +28,6 @@ export const docsConfig: DocsConfig = {
       href: "/docs/figma",
     },
     {
-      title: "GitHub",
-      href: "https://github.com/bento-kit/ui",
-      external: true,
-    },
-    {
       title: "Twitter",
       href: "https://twitter.com/bento-kit",
       external: true,
