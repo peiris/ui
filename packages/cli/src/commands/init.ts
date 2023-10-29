@@ -181,9 +181,7 @@ export async function promptForConfig(
     const { proceed } = await prompts({
       type: "confirm",
       name: "proceed",
-      message: `Write configuration to ${highlight(
-        "components.json"
-      )}. Proceed?`,
+      message: `Write configuration to ${highlight("bento.json")}. Proceed?`,
       initial: true,
     })
 
@@ -194,8 +192,8 @@ export async function promptForConfig(
 
   // Write to file.
   logger.info("")
-  const spinner = ora(`Writing components.json...`).start()
-  const targetPath = path.resolve(cwd, "components.json")
+  const spinner = ora(`Writing bento.json...`).start()
+  const targetPath = path.resolve(cwd, "bento.json")
   await fs.writeFile(targetPath, JSON.stringify(config, null, 2), "utf8")
   spinner.succeed()
 

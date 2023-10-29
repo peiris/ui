@@ -12,9 +12,9 @@ export const DEFAULT_TAILWIND_CONFIG = "tailwind.config.js"
 export const DEFAULT_TAILWIND_BASE_COLOR = "slate"
 
 // TODO: Figure out if we want to support all cosmiconfig formats.
-// A simple components.json file would be nice.
+// A simple bento.json file would be nice.
 const explorer = cosmiconfig("components", {
-  searchPlaces: ["components.json"],
+  searchPlaces: ["bento.json"],
 })
 
 export const rawConfigSchema = z
@@ -92,6 +92,6 @@ export async function getRawConfig(cwd: string): Promise<RawConfig | null> {
 
     return rawConfigSchema.parse(configResult.config)
   } catch (error) {
-    throw new Error(`Invalid configuration found in ${cwd}/components.json.`)
+    throw new Error(`Invalid configuration found in ${cwd}/bento.json.`)
   }
 }
