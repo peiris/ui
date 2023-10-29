@@ -11,8 +11,8 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    twitter: "https://twitter.com/bento-kit",
+    github: "https://github.com/bento-kit/ui",
+    docs: "https://bento-kit.com",
   },
 }

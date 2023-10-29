@@ -1,5 +1,5 @@
 ---
-"shadcn-ui": patch
+"bento-kit": patch
 ---
 
 fix code style

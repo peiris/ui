@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "author": {
-    "name": "shadcn",
+    "name": "bento-kit",
     "url": "https://twitter.com/khpeiris"
   },
   "repository": {
@@ -23,7 +23,7 @@
     "ui",
     "tailwind",
     "radix-ui",
-    "shadcn"
+    "bento-kit"
   ],
   "type": "module",
   "exports": "./dist/index.js",
