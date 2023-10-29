@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/registry/default/ui/button"
 
 interface DocsPagerProps {
-  doc: Doc
+  doc: Doc | Element
 }
 
 export function DocsPager({ doc }: DocsPagerProps) {
@@ -42,7 +42,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
   )
 }
 
-export function getPagerForDoc(doc: Doc) {
+export function getPagerForDoc(doc: any) {
   const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null]
   const activeIndex = flattenedLinks.findIndex(
     (link) => doc.slug === link?.href

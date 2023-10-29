@@ -80,9 +80,89 @@ export const Doc = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const Elements = defineDocumentType(() => ({
+  name: "Element",
+  filePathPattern: `elements/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+      required: true,
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+    radix: {
+      type: "nested",
+      of: RadixProperties,
+    },
+    featured: {
+      type: "boolean",
+      default: false,
+      required: false,
+    },
+    component: {
+      type: "boolean",
+      default: false,
+      required: false,
+    },
+    toc: {
+      type: "boolean",
+      default: true,
+      required: false,
+    },
+  },
+  computedFields,
+}))
+
+export const GridTemplates = defineDocumentType(() => ({
+  name: "GridTemplate",
+  filePathPattern: `grid-templates/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+      required: true,
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+    radix: {
+      type: "nested",
+      of: RadixProperties,
+    },
+    featured: {
+      type: "boolean",
+      default: false,
+      required: false,
+    },
+    component: {
+      type: "boolean",
+      default: false,
+      required: false,
+    },
+    toc: {
+      type: "boolean",
+      default: true,
+      required: false,
+    },
+  },
+  computedFields,
+}))
+
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Doc],
+  documentTypes: [Doc, Elements, GridTemplates],
   mdx: {
     remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [
