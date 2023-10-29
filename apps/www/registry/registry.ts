@@ -2,6 +2,11 @@ import { Registry } from "@/registry/schema"
 
 const ui: Registry = [
   {
+    name: "placeholder-1",
+    type: "components:ui",
+    files: ["ui/placeholder-1.tsx"],
+  },
+  {
     name: "accordion",
     type: "components:ui",
     dependencies: ["@radix-ui/react-accordion"],
@@ -229,6 +234,12 @@ const ui: Registry = [
 ]
 
 const example: Registry = [
+  {
+    name: "placeholder-1-demo",
+    type: "components:example",
+    registryDependencies: ["placeholder-1"],
+    files: ["example/placeholder-1-demo.tsx"],
+  },
   {
     name: "accordion-demo",
     type: "components:example",
