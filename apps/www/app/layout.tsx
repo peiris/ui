@@ -11,7 +11,6 @@ import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeSwitcher } from "@/components/theme-switcher"
 import { Toaster as DefaultToaster } from "@/registry/default/ui/toaster"
-import { Toaster as NewYorkToaster } from "@/registry/default/ui/toaster"
 
 export const metadata: Metadata = {
   title: {
@@ -97,8 +96,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
           </ThemeProvider>
           <ThemeSwitcher />
-          <Analytics />
-          <NewYorkToaster />
           <DefaultToaster />
         </body>
       </html>
