@@ -1,0 +1,10 @@
+{
+  "name": "placeholder-1",
+  "files": [
+    {
+      "name": "placeholder-1.tsx",
+      "content": "import React from \"react\"\n\nexport default function Placeholder() {\n  return <div>Placeholder 1</div>\n}\n"
+    }
+  ],
+  "type": "components:ui"
+}
